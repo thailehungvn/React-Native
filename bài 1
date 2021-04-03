@@ -1,0 +1,45 @@
+import React, { Component } from "react";
+import { render } from "react-dom";
+import { Text, View, StyleSheet, Image } from "react-native";
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  logocontainer: {
+    height: 200,
+    backgroundColor: "red",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  inputContainer: {
+    height: 200,
+    backgroundColor: "#0CC6C5",
+  },
+  spaceContainer: {
+    height: 200,
+    backgroundColor: "#00FF19",
+  },
+});
+export default class Login_H extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        {/* 1. LOGO */}
+        <View style={styles.logocontainer}>
+          <Image
+            style={styles.logo}
+            source={require("./assets/logo.png")}
+            style={{ height: 120, width: 120 }}
+          />
+        </View>
+
+        {/* 2. INPUTS */}
+        <View style={styles.inputContainer}></View>
+
+        {/* 3. SPACE */}
+        <View style={styles.spaceContainer}></View>
+      </View>
+    );
+  }
+}
