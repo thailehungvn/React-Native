@@ -1,0 +1,118 @@
+import React, { Component } from "react";
+import { render } from "react-dom";
+import { Text, View, StyleSheet, Image, Switch } from "react-native";
+import { MaterialCommunityIcons as Icon } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
+import * as Font from "expo-font";
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  logocontainer: {
+    height: 200,
+    backgroundColor: "red",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  inputContainer: {
+    height: 200,
+    backgroundColor: "#FFFFFF",
+    flex: 3,
+    padding: 16,
+  },
+  emailContainer: {
+    marginTop: 12,
+  },
+
+  passwordContainer: {
+    marginTop: 12,
+  },
+  label: {
+    marginBottom: 12,
+    color: "#525C67",
+    fontFamily: "SVN-Gilroy-Medium",
+  },
+
+  input: {
+    height: 56,
+    backgroundColor: "#E4E4E4",
+    alignItems: "center",
+    justifyContent: "space-between",
+    borderRadius: 8,
+    paddingHorizontal: 24,
+    flexDirection: "row",
+  },
+
+  placeholderText: {
+    color: "#898B9A",
+    fontFamily: "SVN-Gilroy-Medium",
+    fontSize: 14,
+  },
+
+  footerContainer: {
+    backgroundColor: "#FFFFFF",
+    // flex: 1,
+    paddingHorizontal: 16,
+  },
+  loginButton: {
+    marginTop: 24,
+    height: 56,
+    borderRadius: 8,
+    backgroundColor: "#003AFA",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
+  loginText: {
+    color: "white",
+    fontSize: 16,
+    fontFamily: "SVN-Gilroy-SemiBold",
+  },
+  spaceContainer: {
+    height: 120,
+    backgroundColor: "#FFFFFF",
+  },
+});
+export default class Login_H extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        {/* 1. LOGO */}
+        <View style={styles.logocontainer}>
+          <Image
+            style={styles.logo}
+            source={require("./assets/logo.png")}
+            style={{ height: 120, width: 120 }}
+          />
+        </View>
+
+        {/* INPUTS */}
+        <View style={styles.inputContainer}>
+          {/* EMAIL INPUT */}
+          <View style={styles.emailContainer}>
+            <Text style={styles.label}>Email</Text>
+            <View style={styles.input}>
+              <Text style={styles.placeholderText}>Enter your email</Text>
+            </View>
+          </View>
+
+          {/* PASSWORD INPUT */}
+          <View style={styles.passwordContainer}>
+            <Text style={styles.label}>Password</Text>
+            <View style={styles.input}>
+              <Text style={styles.placeholderText}>Enter your password</Text>
+            </View>
+          </View>
+        </View>
+        {/* 3. SPACE */}
+        <View style={styles.spaceContainer}>
+          {/* SIGN IN BUTTON */}
+          <View style={styles.loginButton}>
+            <Text style={styles.loginText}>Sign In</Text>
+          </View>
+        </View>
+      </View>
+    );
+  }
+}
